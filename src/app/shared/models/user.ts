@@ -5,3 +5,11 @@ export interface User{
   department: string;
   isAdmin?: boolean;
 }
+
+export interface Shoe{
+  colour: string;
+  size: number;
+  brand: string;
+  price: number;
+  isUsed?: boolean;
+}
