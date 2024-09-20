@@ -1,9 +1,22 @@
+<html>
+<body>
 <div class="container">
-  <h2>User List</h2>
-  <div *ngFor="let user of userList" class="user-card">
-    <h3>{{ user.firstName }} {{ user.lastName }}</h3>
-    <p>ID: {{ user.id }}</p>
-    <p>Department: {{ user.department }}</p>
-    <p>Admin: {{ user.isAdmin ? 'Yes' : 'No' }}</p>
-  </div>
+  <h1>List of Shoes</h1>
+  <div *ngFor="let shoe of shoeList" class="shoe-class">
+    <h2>Brand: {{ shoe.brand }}</h2>
+    <h3>Colour: {{ shoe.colour }}</h3>
+    <h4>Size: {{ shoe.size }}</h4>
+    <h5>Price: ${{ shoe.price }}</h5>
+    <h5>Used: {{ shoe.isUsed ? 'Yes' : 'No' }}</h5>
+
+
+
+    <div><p *ngIf="shoe.isUsed; else notUsed" >This shoe is in good quality.</p>
+      <ng-template #notUsed><p>This shoe has been used and may not be good quality</p></ng-template>
+    </div>
+
 </div>
+</div>
+</body>
+</html>
+
