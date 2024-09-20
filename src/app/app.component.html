@@ -1,34 +1,9 @@
-
-
-<!-- Jamie Virtue's First Angular Attempt -->
-
-<style>
-
-  h1 {
-    font-size: 5em;
-    text-align: center;
-    font-style: italic;
-  }
-
-  p{
-    font-size: 2em;
-    margin-bottom: 2em;
-    text-align: center;
-  }
-
-  p:first-of-type{
-    font-size: 2.5em;
-    color: brown;
-  }
-
-  p:last-of-type{color: indigo;}
-
-</style>
-
-<h1>{{ title }}</h1>
-<p>Congratulations! Your app is running. 🎉</p>
-<p> Hello, {{ name }} </p>
-<p> You are part of the {{ program }} course. </p>
-
-
-<router-outlet />
+<div class="container">
+  <h2>User List</h2>
+  <div *ngFor="let user of userList" class="user-card">
+    <h3>{{ user.firstName }} {{ user.lastName }}</h3>
+    <p>ID: {{ user.id }}</p>
+    <p>Department: {{ user.department }}</p>
+    <p>Admin: {{ user.isAdmin ? 'Yes' : 'No' }}</p>
+  </div>
+</div>
