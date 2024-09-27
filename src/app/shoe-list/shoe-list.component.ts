@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import {Shoe} from "../shared/models/user";
 import {ShoeListItemComponent} from "../shoe-list-item/shoe-list-item.component";
+import {NgForOf} from "@angular/common";
 
 @Component({
   selector: 'app-shoe-list',
   standalone: true,
   imports: [
-    ShoeListItemComponent
+    ShoeListItemComponent,
+    NgForOf
   ],
   templateUrl: './shoe-list.component.html',
   styleUrl: './shoe-list.component.css'

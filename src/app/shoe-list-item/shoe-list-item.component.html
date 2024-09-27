@@ -9,8 +9,9 @@
 </head>
 <body>
 
-  <div>
+  <div [ngStyle]="{'background-color' : background}">
     <h2>{{shoeListItem?.brand}}</h2>
+
   </div>
 
 
@@ -22,6 +23,8 @@
     border: 2px burlywood solid;
     text-align: center;
   }
+
+
 </style>
 
 
