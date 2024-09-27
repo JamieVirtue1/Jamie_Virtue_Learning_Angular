@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { Shoe } from './shared/models/user';
 import {CommonModule} from "@angular/common";
 import {NgIf} from "@angular/common";
+import {ShoeListComponent} from "./shoe-list/shoe-list.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, NgIf],
+  imports: [RouterOutlet, CommonModule, NgIf, ShoeListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 
