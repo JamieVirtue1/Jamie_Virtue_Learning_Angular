@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { User } from './shared/models/user';
 import { Shoe } from './shared/models/user';
 import {CommonModule} from "@angular/common";
 import {NgIf} from "@angular/common";
