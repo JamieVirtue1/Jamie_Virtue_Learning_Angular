@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-/**import {Shoe} from "../shared/models/user";*/
+import {Shoe} from "../shared/models/user";
 import {ShoeListItemComponent} from "../shoe-list-item/shoe-list-item.component";
 import {NgForOf} from "@angular/common";
+import {ShoeServiceService} from "../../Services/shoe-service.service";
 
 @Component({
   selector: 'app-shoe-list',
@@ -15,6 +16,9 @@ import {NgForOf} from "@angular/common";
 })
 
 export class ShoeListComponent {
+
+  constructor(private ShoeService: ShoeServiceService) {
+  }
 
 }
 
