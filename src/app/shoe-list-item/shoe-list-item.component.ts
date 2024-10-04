@@ -1,6 +1,9 @@
 import {Component, Input} from '@angular/core';
 import {Shoe} from "../shared/models/user";
 import {NgStyle} from "@angular/common";
+import {ShoeServiceService} from "../../Services/shoe-service.service";
+import {shoeArray} from "../../data/mock-content";
+import {ShoeListComponent} from "../shoe-list/shoe-list.component";
 
 @Component({
   selector: 'app-shoe-list-item',
@@ -14,5 +17,9 @@ import {NgStyle} from "@angular/common";
 export class ShoeListItemComponent {
 
   @Input() shoeListItem?:Shoe;
+
   @Input() background?: string;
+  protected readonly ShoeServiceService = ShoeServiceService;
+  protected readonly  = shoeArray;
+  protected readonly ShoeListComponent = ShoeListComponent;
 }
