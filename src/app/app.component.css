@@ -38,3 +38,10 @@ div.container {
 html{
   background-color: burlywood;
 }
+
+div.chosenShoe{
+  background-color: darkred;
+  color:sandybrown;
+  border: 3px solid black;
+}
+
