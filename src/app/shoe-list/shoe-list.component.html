@@ -1,5 +1,5 @@
 <app-shoe-list-item
-  *ngFor="let shoe of shoeList; even as isEven"
+  *ngFor="let shoe of shoeArray; even as isEven"
   [shoeListItem]="shoe"
   [background]=" isEven ? 'beige' : 'floralwhite' ">
 </app-shoe-list-item>

@@ -12,4 +12,5 @@ export interface Shoe{
   brand: string;
   price: number;
   isUsed?: boolean;
+  id: number;
 }

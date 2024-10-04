@@ -3,6 +3,7 @@ import {Shoe} from "../shared/models/user";
 import {ShoeListItemComponent} from "../shoe-list-item/shoe-list-item.component";
 import {NgForOf} from "@angular/common";
 import {ShoeServiceService} from "../../Services/shoe-service.service";
+import {shoeArray} from "../../data/mock-content";
 
 @Component({
   selector: 'app-shoe-list',
@@ -17,7 +18,15 @@ import {ShoeServiceService} from "../../Services/shoe-service.service";
 
 export class ShoeListComponent {
 
-  constructor(private ShoeService: ShoeServiceService) {
+  shoeArray: Shoe[] = [];
+
+  constructor(private shoeService: ShoeServiceService) {
+  }
+
+  ngOnInit() {
+    this.shoeService.getShoes().subscribe({
+      next: (data: Shoe[]) => this.shoeArray = data,
+    })
   }
 
 }
