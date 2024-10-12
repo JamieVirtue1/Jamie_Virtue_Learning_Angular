@@ -8,3 +8,4 @@ export const shoeArray: Shoe[] = [
   {colour: "Green", size: 9, brand: "Sketchers", price: 60, isUsed: true, id: 5},
   {colour: "White & Blue", size: 10, brand: "Puma", price: 100, isUsed: false, id: 6},
 ];
+

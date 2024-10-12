@@ -1,7 +1,13 @@
 <h1>{{title}}</h1>
+<div class ="nav-bar">
+  <nav>
+    <a [routerLink]="['/shoe']" routerLinkActive="active">Shoe List</a>
+    <br>
+    <a [routerLink]="['/modify-shoe']" routerLinkActive="active">Modify Shoe</a>
+  </nav>
+</div>
 
+<router-outlet></router-outlet>
 
-<div class="chosenShoe"><app-shoe-list-item [shoeListItem]="selectedShoe"></app-shoe-list-item></div>
-
-
-<div class="app-container"><app-shoe-list></app-shoe-list></div>
+<div *ngIf="router.url === '/shoe'" class="chosenShoe"><app-shoe-list-item [shoeListItem]="selectedShoe"></app-shoe-list-item></div>
+<div  *ngIf="router.url === '/shoe'" class="app-container"><app-shoe-list></app-shoe-list></div>
