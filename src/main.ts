@@ -13,6 +13,7 @@ const routes: Routes = [
   {path:'', redirectTo: '/shoe', pathMatch: 'full'},
   {path: 'shoe', component: ShoeListItemComponent},
   {path: 'modify-shoe', component: ModifyShoeComponent},
+  {path: 'modify-shoe/:id', component: ModifyShoeComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 

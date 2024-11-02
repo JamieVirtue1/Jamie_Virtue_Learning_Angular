@@ -9,10 +9,10 @@
 </head>
 <body>
 
-  <div [ngStyle]="{'background-color' : background}">
-    <h2>{{shoeListItem?.brand}}</h2>
+  <div  [ngStyle]="{'background-color' : background}">
+    <h2 >{{shoeListItem?.brand}}</h2>
     <img src="../Images/{{shoeListItem?.brand}}.jpg" alt="{{shoeListItem?.brand}} image" width="500" height="300"/>
-    <a style='float:right'[routerLink]="['/modify-shoe']"><button> Edit</button></a>
+    <a style='float:right'[routerLink]="['/modify-shoe', shoeListItem?.id]"><button> Edit</button></a>
     <button style='float:right' (click)="delete(shoeListItem?.id)"> Delete Shoe</button>
     </div>
 

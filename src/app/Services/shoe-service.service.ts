@@ -23,6 +23,7 @@ export class ShoeServiceService {
 
   //Update
   updateShoes(updatedShoe: Shoe): Observable<Shoe[]> {
+    console.log(updatedShoe);
     const index = this.shoes.findIndex(shoeChoice => shoeChoice.id === updatedShoe.id);
     if (index !== -1) {
       this.shoes[index] = updatedShoe;
@@ -44,5 +45,9 @@ export class ShoeServiceService {
   getShoeById(shoeId: number): Observable<Shoe | undefined> {
     const shoe = this.shoes.find(shoeChoice => shoeChoice.id === shoeId);
     return of(shoe);
+  }
+
+  generateNewId() {
+    return this.shoes.length > 0 ? Math.max(...this.shoes.map(shoe => shoe.id)) + 1 : 1;
   }
 }

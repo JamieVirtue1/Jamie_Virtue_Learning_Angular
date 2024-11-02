@@ -11,6 +11,6 @@ export interface Shoe{
   size: number;
   brand: string;
   price: number;
-  isUsed?: boolean;
+  isUsed: boolean;
   id: number;
 }
