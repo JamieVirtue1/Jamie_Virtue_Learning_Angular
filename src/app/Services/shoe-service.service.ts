@@ -12,26 +12,33 @@ export class ShoeServiceService {
   private shoes: Shoe[] = shoeArray;
   constructor() { }
 
-  getShoes(): Observable<Shoe[]>{
-    return of(shoeArray);
-  }
 
+  //Crud Operations
+
+  //Add
   addShoe(newShoe:Shoe) : Observable<Shoe[]>{
     this.shoes.push(newShoe)
     return of(this.shoes);
   }
 
-  deleteShoe(shoeId: number): Observable<Shoe[]> {
-    this.shoes = this.shoes.filter(shoeChoice => shoeChoice.id !== shoeId);
-    return of(this.shoes);
-  }
-
+  //Update
   updateShoes(updatedShoe: Shoe): Observable<Shoe[]> {
     const index = this.shoes.findIndex(shoeChoice => shoeChoice.id === updatedShoe.id);
     if (index !== -1) {
       this.shoes[index] = updatedShoe;
     }
     return of(this.shoes);
+  }
+
+  //Delete
+  deleteShoe(shoeId: number): Observable<Shoe[]> {
+    this.shoes = this.shoes.filter(shoeChoice => shoeChoice.id !== shoeId);
+    return of(this.shoes);
+  }
+
+  //Retrieve
+  getShoes(): Observable<Shoe[]>{
+    return of(shoeArray);
   }
 
   getShoeById(shoeId: number): Observable<Shoe | undefined> {
