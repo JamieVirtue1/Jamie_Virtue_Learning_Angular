@@ -33,5 +33,9 @@ export class ModifyShoeComponent implements OnInit{
   onDelete() {
 
   }
+
+  onSubmit() {
+
+  }
 }
 
