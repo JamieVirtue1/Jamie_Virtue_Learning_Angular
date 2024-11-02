@@ -31,9 +31,9 @@ export class ShoeServiceService {
   }
 
   //Delete
-  deleteShoe(shoeId: number): Observable<Shoe[]> {
+  deleteShoe(shoeId: number): void{
     this.shoes = this.shoes.filter(shoeChoice => shoeChoice.id !== shoeId);
-    return of(this.shoes);
+    console.log(this.shoes);
   }
 
   //Retrieve
