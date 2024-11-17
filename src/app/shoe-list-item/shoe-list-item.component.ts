@@ -5,6 +5,7 @@ import {ShoeServiceService} from "../Services/shoe-service.service";
 import {shoeArray} from "../../data/mock-content";
 import {ShoeListComponent} from "../shoe-list/shoe-list.component";
 import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
+import {BooleanPipe} from "../pipes/boolean.pipe";
 
 
 @Component({
@@ -17,7 +18,8 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
     RouterLink,
     CurrencyPipe,
     UpperCasePipe,
-    DecimalPipe
+    DecimalPipe,
+    BooleanPipe
   ],
   templateUrl: './shoe-list-item.component.html',
   styleUrl: './shoe-list-item.component.css'
