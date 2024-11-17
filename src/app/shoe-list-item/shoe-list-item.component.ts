@@ -1,10 +1,11 @@
 import {Component, Input} from '@angular/core';
 import {Shoe} from "../shared/models/user";
-import {NgStyle} from "@angular/common";
+import {CurrencyPipe, DecimalPipe, NgStyle, UpperCasePipe} from "@angular/common";
 import {ShoeServiceService} from "../Services/shoe-service.service";
 import {shoeArray} from "../../data/mock-content";
 import {ShoeListComponent} from "../shoe-list/shoe-list.component";
 import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
+
 
 @Component({
   selector: 'app-shoe-list-item',
@@ -13,7 +14,10 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
     NgStyle,
     RouterLinkActive,
     RouterOutlet,
-    RouterLink
+    RouterLink,
+    CurrencyPipe,
+    UpperCasePipe,
+    DecimalPipe
   ],
   templateUrl: './shoe-list-item.component.html',
   styleUrl: './shoe-list-item.component.css'

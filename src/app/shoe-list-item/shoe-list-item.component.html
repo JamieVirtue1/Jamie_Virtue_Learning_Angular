@@ -10,7 +10,11 @@
 <body>
 
   <div  [ngStyle]="{'background-color' : background}">
-    <h2 >{{shoeListItem?.brand}}</h2>
+    <h2 >{{shoeListItem?.brand | uppercase}}</h2>
+    <h2>{{shoeListItem?.colour}}</h2>
+    <h2>{{shoeListItem?.size}}</h2>
+    <h2>{{shoeListItem?.price | number: '1.2-2' | currency: "CAD": "symbol-narrow"}}</h2>
+    <h2>{{shoeListItem?. isUsed}}</h2>
     <img src="../Images/{{shoeListItem?.brand}}.jpg" alt="{{shoeListItem?.brand}} image" width="500" height="300"/>
     <a style='float:right'[routerLink]="['/modify-shoe', shoeListItem?.id]"><button> Edit</button></a>
     <button style='float:right' (click)="delete(shoeListItem?.id)"> Delete Shoe</button>
