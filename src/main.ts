@@ -12,9 +12,18 @@ bootstrapApplication(AppComponent, appConfig)
 const routes: Routes = [
   {path:'', redirectTo: '/shoe', pathMatch: 'full'},
   {path: 'shoe', component: ShoeListItemComponent},
-  {path: 'modify-shoe', component: ModifyShoeComponent},
-  {path: 'modify-shoe/:id', component: ModifyShoeComponent},
-  {path: '**', component: PageNotFoundComponent}
+
+  {path: 'modify-shoe',
+    loadComponent:()=>
+      import('./app/modify-shoe/modify-shoe.component').then(m => m.ModifyShoeComponent) },
+
+  {path: 'modify-shoe/:id',
+    loadComponent:()=>
+    import('./app/modify-shoe/modify-shoe.component').then(m => m.ModifyShoeComponent) },
+
+  {path: '**',
+    loadComponent:()=>
+      import('./app/page-not-found/page-not-found.component').then(m => m.PageNotFoundComponent) }
 ];
 
 bootstrapApplication(AppComponent, {
