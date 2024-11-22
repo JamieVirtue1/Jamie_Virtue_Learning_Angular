@@ -3,12 +3,14 @@ import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} fr
 import {Shoe} from "../shared/models/user";
 import {ActivatedRoute, Router} from "@angular/router";
 import {ShoeServiceService} from "../Services/shoe-service.service";
+import {FocusHighlightDirective} from "../Directives/focus-highlight.directive";
 @Component({
   selector: 'app-modify-shoe',
   standalone: true,
   imports: [
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FocusHighlightDirective
   ],
   templateUrl: './modify-shoe.component.html',
   styleUrl: './modify-shoe.component.css'

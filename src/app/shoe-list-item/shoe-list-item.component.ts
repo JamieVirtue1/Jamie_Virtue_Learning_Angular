@@ -7,7 +7,7 @@ import {ShoeListComponent} from "../shoe-list/shoe-list.component";
 import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
 import {BooleanPipe} from "../pipes/boolean.pipe";
 import {DisplayColourPipe} from "../pipes/display-colour.pipe";
-import {HoverHighlightDirective} from "../hover-highlight.directive";
+import {HoverHighlightDirective} from "../Directives/hover-highlight.directive";
 
 
 @Component({
