@@ -7,6 +7,7 @@ import {ShoeListComponent} from "../shoe-list/shoe-list.component";
 import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
 import {BooleanPipe} from "../pipes/boolean.pipe";
 import {DisplayColourPipe} from "../pipes/display-colour.pipe";
+import {HoverHighlightDirective} from "../hover-highlight.directive";
 
 
 @Component({
@@ -22,7 +23,8 @@ import {DisplayColourPipe} from "../pipes/display-colour.pipe";
     DecimalPipe,
     BooleanPipe,
     DisplayColourPipe,
-    DisplayColourPipe
+    DisplayColourPipe,
+    HoverHighlightDirective
   ],
   templateUrl: './shoe-list-item.component.html',
   styleUrl: './shoe-list-item.component.css'

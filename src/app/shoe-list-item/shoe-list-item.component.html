@@ -9,8 +9,8 @@
 </head>
 <body>
 
-  <div  [ngStyle]="{'background-color' : background}">
-    <h2 >{{shoeListItem?.brand | uppercase}}</h2>
+  <div appHoverHighlight [ngStyle]="{'background-color' : background}">
+    <h2>{{shoeListItem?.brand | uppercase}}</h2>
     <h2>{{shoeListItem?.colour}}</h2>
     <h2>{{shoeListItem?.size}}</h2>
     <h2>{{shoeListItem?.price | number: '1.2-2' | currency: "CAD": "symbol-narrow"}}</h2>
