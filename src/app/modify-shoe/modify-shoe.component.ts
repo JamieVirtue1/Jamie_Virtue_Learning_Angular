@@ -4,13 +4,17 @@ import {Shoe} from "../shared/models/user";
 import {ActivatedRoute, Router} from "@angular/router";
 import {ShoeServiceService} from "../Services/shoe-service.service";
 import {FocusHighlightDirective} from "../Directives/focus-highlight.directive";
+import {MatCardModule} from "@angular/material/card";
+import {MatInputModule} from "@angular/material/input";
 @Component({
   selector: 'app-modify-shoe',
   standalone: true,
   imports: [
     FormsModule,
     ReactiveFormsModule,
-    FocusHighlightDirective
+    FocusHighlightDirective,
+    MatCardModule,
+    MatInputModule
   ],
   templateUrl: './modify-shoe.component.html',
   styleUrl: './modify-shoe.component.css'

@@ -8,6 +8,8 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
 import {BooleanPipe} from "../pipes/boolean.pipe";
 import {DisplayColourPipe} from "../pipes/display-colour.pipe";
 import {HoverHighlightDirective} from "../Directives/hover-highlight.directive";
+import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
 
 
 @Component({
@@ -24,7 +26,9 @@ import {HoverHighlightDirective} from "../Directives/hover-highlight.directive";
     BooleanPipe,
     DisplayColourPipe,
     DisplayColourPipe,
-    HoverHighlightDirective
+    HoverHighlightDirective,
+    MatCardModule,
+    MatButtonModule
   ],
   templateUrl: './shoe-list-item.component.html',
   styleUrl: './shoe-list-item.component.css'

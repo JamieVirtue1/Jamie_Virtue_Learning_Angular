@@ -1,34 +1,42 @@
 <form [formGroup]="shoeForm" (ngSubmit)="onSubmit()">
+
   <!-- Colour Field -->
-  <div class="form-group">
-    <label for="colour">Colour</label>
-    <input appFocusHighlight type="text" id="colour" formControlName="colour"/>
-  </div>
+  <mat-form-field appearance="outline" class="form-field" disabled>
+    <mat-label>Colour</mat-label>
+    <label for="size">Colour</label>
+    <input matInput appFocusHighlight type="text" id="colour" formControlName="colour"/>
+  </mat-form-field>
 
   <!-- Size Field -->
-  <div class="form-group">
+  <mat-form-field appearance="outline" class="form-field" disabled>
+    <mat-label>Size</mat-label>
     <label for="size">Size</label>
-    <input appFocusHighlight ="number" id="size" formControlName="size"/>
-  </div>
+    <input matInput appFocusHighlight ="number" id="size" formControlName="size"/>
+  </mat-form-field>
 
   <!-- Brand Field -->
-  <div class="form-group">
+  <mat-form-field appearance="outline" class="form-field" disabled>
+    <mat-label>Brand</mat-label>
     <label for="brand">Brand</label>
-    <input appFocusHighlight ="text" id="brand" formControlName="brand"/>
-  </div>
+    <input matInput appFocusHighlight ="text" id="brand" formControlName="brand"/>
+  </mat-form-field>
 
   <!-- Price Field -->
-  <div class="form-group">
-    <label for="price">Price</label>
-    <input appFocusHighlight ="number" id="price" formControlName="price"/>
-  </div>
+    <mat-form-field appearance="outline" class="form-field" disabled>
+      <mat-label>Price</mat-label>
+      <label for="price">Price</label>
+      <input matInput appFocusHighlight ="number" id="price" formControlName="price"/>
+    </mat-form-field>
 
   <!-- Used/Unused Field -->
-  <label for="isUsed">Used:</label>
-  <select id="isUsed" name="isUsed" size="2" formControlName="isUsed">
-    <option value="true" >True</option>
-    <option value="false">False</option>
-  </select>
+  <mat-form-field appearance="outline" class="form-field" disabled>
+    <mat-label>Used:</mat-label>
+    <label for="isUsed">Used:</label>
+    <select id="isUsed" name="isUsed" size="2" formControlName="isUsed">
+      <option value="true" >True</option>
+      <option value="false">False</option>
+    </select>
+  </mat-form-field>
 
   <br>
 

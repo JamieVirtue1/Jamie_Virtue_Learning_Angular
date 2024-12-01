@@ -1,5 +1,18 @@
-<app-shoe-list-item
-    *ngFor="let shoe of shoeArray; even as isEven"
+<mat-card *ngFor="let shoe of shoeArray; even as isEven"
+          [ngStyle]="{'background-color': isEven ? 'beige' : 'floralwhite'}"
+class="singleShoe">
+
+  <mat-divider></mat-divider>
+
+  <mat-icon class="shoe-icon">
+    <img src="../Images/shoeicon.jpg" alt="Shoe Image" class="shoe-icon">
+  </mat-icon>
+
+  <app-shoe-list-item
     [shoeListItem]="shoe"
-    [background]=" isEven ? 'beige' : 'floralwhite' ">
-</app-shoe-list-item>
+    [background]="isEven ? 'beige' : 'floralwhite'">
+  </app-shoe-list-item>
+
+  <mat-divider></mat-divider>
+
+</mat-card>

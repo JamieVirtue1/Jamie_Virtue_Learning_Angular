@@ -10,31 +10,23 @@
 <body>
 
   <div appHoverHighlight [ngStyle]="{'background-color' : background}">
-    <h2>{{shoeListItem?.brand | uppercase}}</h2>
-    <h2>{{shoeListItem?.colour}}</h2>
-    <h2>{{shoeListItem?.size}}</h2>
-    <h2>{{shoeListItem?.price | number: '1.2-2' | currency: "CAD": "symbol-narrow"}}</h2>
 
-    <h2 [ngStyle]="{'color': (shoeListItem?.isUsed ?? false| booleanPipe | displayColour)}">
-      {{ shoeListItem?.isUsed ?? false| booleanPipe }}
-    </h2>
+    <mat-card class="shoe-item-card">
 
-    <img src="../Images/{{shoeListItem?.brand}}.jpg" alt="{{shoeListItem?.brand}} image" width="500" height="300"/>
-    <a style='float:right'[routerLink]="['/modify-shoe', shoeListItem?.id]"><button> Edit</button></a>
-    <button style='float:right' (click)="delete(shoeListItem?.id)"> Delete Shoe</button>
-    </div>
+      <mat-card-title>{{shoeListItem?.brand | uppercase}}</mat-card-title>
+      <mat-card-subtitle>{{shoeListItem?.colour}}</mat-card-subtitle>
+
+      <mat-card-content>
+        <h3>{{shoeListItem?.size}}</h3>
+        <h3>{{shoeListItem?.price | number: '1.2-2' | currency: "CAD": "symbol-narrow"}}</h3>
+        <h3 [ngStyle]="{'color': (shoeListItem?.isUsed ?? false| booleanPipe | displayColour)}"> {{ shoeListItem?.isUsed ?? false| booleanPipe }}</h3>
+      </mat-card-content>
+
+      <img src="../Images/{{shoeListItem?.brand}}.jpg" alt="{{shoeListItem?.brand}} image" width="500" height="300"/>
+      <a style='float:right'[routerLink]="['/modify-shoe', shoeListItem?.id]"><button> Edit</button></a>
+      <button style="float:right"  (click)="delete(shoeListItem?.id)"> Delete Shoe</button>
+    </mat-card>
+  </div>
 
 </body>
 </html>
-
-<style>
-  div{
-    border: 2px burlywood solid;
-    text-align: center;
-  }
-</style>
-
-
-
-
-
