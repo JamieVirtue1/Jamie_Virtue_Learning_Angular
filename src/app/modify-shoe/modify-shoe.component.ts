@@ -6,6 +6,8 @@ import {ShoeServiceService} from "../Services/shoe-service.service";
 import {FocusHighlightDirective} from "../Directives/focus-highlight.directive";
 import {MatCardModule} from "@angular/material/card";
 import {MatInputModule} from "@angular/material/input";
+import {MatTooltipModule} from "@angular/material/tooltip";
+
 @Component({
   selector: 'app-modify-shoe',
   standalone: true,
@@ -14,7 +16,8 @@ import {MatInputModule} from "@angular/material/input";
     ReactiveFormsModule,
     FocusHighlightDirective,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    MatTooltipModule
   ],
   templateUrl: './modify-shoe.component.html',
   styleUrl: './modify-shoe.component.css'

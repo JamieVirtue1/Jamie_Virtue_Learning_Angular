@@ -4,35 +4,39 @@
   <mat-form-field appearance="outline" class="form-field" disabled>
     <mat-label>Colour</mat-label>
     <label for="size">Colour</label>
-    <input matInput appFocusHighlight type="text" id="colour" formControlName="colour"/>
+    <input matInput appFocusHighlight type="text" id="colour" formControlName="colour"
+           matTooltip="Enter shoe colour">
   </mat-form-field>
 
   <!-- Size Field -->
   <mat-form-field appearance="outline" class="form-field" disabled>
     <mat-label>Size</mat-label>
     <label for="size">Size</label>
-    <input matInput appFocusHighlight ="number" id="size" formControlName="size"/>
+    <input matInput appFocusHighlight ="number" id="size" formControlName="size"
+           matTooltip="Enter shoe size">
   </mat-form-field>
 
   <!-- Brand Field -->
   <mat-form-field appearance="outline" class="form-field" disabled>
     <mat-label>Brand</mat-label>
     <label for="brand">Brand</label>
-    <input matInput appFocusHighlight ="text" id="brand" formControlName="brand"/>
+    <input matInput appFocusHighlight ="text" id="brand" formControlName="brand"
+    matTooltip="Enter Brand"/>
   </mat-form-field>
 
   <!-- Price Field -->
-    <mat-form-field appearance="outline" class="form-field" disabled>
-      <mat-label>Price</mat-label>
-      <label for="price">Price</label>
-      <input matInput appFocusHighlight ="number" id="price" formControlName="price"/>
-    </mat-form-field>
+  <mat-form-field appearance="outline" class="form-field">
+    <mat-label>Price</mat-label>
+    <label for="price">Price</label>
+    <input matInput appFocusHighlight type="number" id="price" formControlName="price"
+           matTooltip="Enter shoe price">
+  </mat-form-field>
 
   <!-- Used/Unused Field -->
   <mat-form-field appearance="outline" class="form-field" disabled>
     <mat-label>Used:</mat-label>
     <label for="isUsed">Used:</label>
-    <select id="isUsed" name="isUsed" size="2" formControlName="isUsed">
+    <select id="isUsed" name="isUsed" size="2" formControlName="isUsed" matTooltip="Was this shoe used?">
       <option value="true" >True</option>
       <option value="false">False</option>
     </select>
